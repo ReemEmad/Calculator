@@ -1,0 +1,16 @@
+.Keypad {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 2.5 1 0;
+}
+
+.Keypad-row {
+  display: flex;
+  flex: 1 0 20%;
+}
+
+.Keypad-row:last-of-type {
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
