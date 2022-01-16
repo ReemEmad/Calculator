@@ -149,7 +149,7 @@ class AppContainer extends Component {
       operand = operand.times(new Decimal(PI).dividedBy(180))
     }
 
-    let output = operand[operation]()
+    let output = operand[operation]().toFixed(1)
 
     this.setState({
       displayValue: output.toString(),
@@ -240,7 +240,6 @@ class AppContainer extends Component {
    * Handles click event for all calculator keys
    */
   handleClick = (event, { type }) => {
-    console.log(this[camelCase(`handle-${type}-Key`)])
     // Decide which method to call based on key type
     this[camelCase(`handle-${type}-Key`)].call(this, event.currentTarget)
   }
